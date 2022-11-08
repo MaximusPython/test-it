@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница о нас</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        body {background-color: rgb(54, 30, 210);}
+        h1 {color: rgb(201, 89, 89); font-size: 2em}
+        p {color: #fafafa; font-size: 1.1em;}
+    </style>
+</head>
+<body>
+
+    <%- include ('blocks/header.ejs') %>
+
+    <h1>ПРИВЕТ МИР</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel reprehenderit nobis nostrum adipisci aspernatur, 
+        totam sint fugit inventore nesciunt, soluta expedita? At necessitatibus inventore soluta ea numquam exercitationem 
+        voluptas quo!</p>
+
+<form method="post" action = "/about">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+        <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" name="pass" class="form-control" id="exampleInputPassword1">
+    </div>
+        <div class="mb-3 form-check">
+        <input type="checkbox" name="check" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+</form>
+</body>
+</html>

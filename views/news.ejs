@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок страницы</title>
+    <style>
+        body {background-color: rgb(210, 30, 168);}
+        h1 {color: white; font-size: 2em}
+        p {color: #fafafa; font-size: 1.1em;}
+    </style>
+</head>
+<body>
+
+    <%- include ('blocks/header.ejs') %>
+
+
+    <h1>Новостная страница с ID <%= newsID %></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel reprehenderit nobis nostrum adipisci aspernatur, 
+        totam sint fugit inventore nesciunt, soluta expedita? At necessitatibus inventore soluta ea numquam exercitationem 
+        voluptas quo!</p>
+    
+    <p>
+        <%= newParam %>
+    </p> 
+
+    <p><b>Наш Титл:</b> <%= nash_obj.title %></p>
+    
+    <p><b>Наш id:</b> <%= nash_obj.id %></p>
+
+
+    <ul>
+
+        <% nash_obj.paragraphs.forEach(function(item) { %>
+        <li><%= item %></li>
+        
+        <% }); %>
+
+    </ul>
+
+
+
+</body>
+</html>
